@@ -1,1 +1,29 @@
 @import './style.css';
+
+.header-left {
+  position: relative;
+  background: url(../media/login-banner.png) center / cover no-repeat;
+  height: 100svh;
+  width: 100%;
+}
+
+.header-text {
+  position: absolute;
+  top: 40px;
+  left: 10%;
+}
+
+h1 {
+  color: white;
+}
+
+#link-logo {
+  width: 35px;
+  display: inline-block;
+}
+
+.header-container {
+  width: 33%;
+  height: 100svh;
+
+}
