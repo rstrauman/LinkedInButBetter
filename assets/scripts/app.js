@@ -1,12 +1,21 @@
 'use strict';
+import { 
+    getElement, 
+    select, 
+    selectAll, 
+    listen,
+    addClass,
+    removeClass,
+    toggleClass
+} from './utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-const login = document.querySelector('.login');
-const wronginfo = document.querySelector('.wrong-info');
-const usernameinput = document.getElementById('username');
-const passwordinput = document.getElementById('password');
-const inputbox = document.querySelector('.input-box');
+const login = select('.login');
+const wronginfo = select('.wrong-info');
+const usernameinput = getElement('username');
+const passwordinput = getElement('password');
+const inputbox = select('.input-box');
 usernameinput.value = '';
 passwordinput.value = '';
 let matched = false;
@@ -76,7 +85,7 @@ function matchCred() {
 
 // result();
 
-login.addEventListener('click', () => {
+listen('click', login, () => {
   matchCred();
   if(!matched) {
     wronginfo.innerText = 'Incorrect username or password';
