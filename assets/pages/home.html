@@ -118,6 +118,76 @@
                         <p><i class="fa-solid fa-file-pdf"></i> Export as PDF</p>
                     </div>
                 </div>
+                <div class="col-flex main-middle">
+                    <div class="content-container">
+                        <form action="/submit" method="POST">
+                            <textarea id="new-post" name="new-post" placeholder="What's up?" value="" rows="4" cols="50"></textarea>
+                            <div class="img-post-container">
+                                <div>
+                                    <input type="file" id="photo-upload" accept="image/*" hidden>
+                                    <label for=photo-upload class="upload-icon">
+                                        <i class="fa-regular fa-image"></i>
+                                    </label>
+                                    <span id="photo-name" class="photo-name"></span>
+                                </div>
+                                <button type="button" id="post-btn">Post</button>
+                            </div>
+                         </form>
+                        <div class="post-flex-container">
+                            <div class="post-container">
+                                <div class="user-info-post">
+                                    <div class="left-side-post">
+                                        <img src="profile-picture-post">
+                                        <div class="col-flex">
+                                            <p>User_Name</p>
+                                            <p>Job Title</p>
+                                        </div>
+                                    </div>
+                                    <div class="right-side-post">
+                                        <div class="col-flex">
+                                            <p>...</p>
+                                            <p>Date/Time</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat minus impedit consequuntur alias blanditiis debitis aliquam velit voluptas magnam. Minima modi voluptatem culpa inventore, repudiandae rerum tempora asperiores ducimus.</p>
+                                </div>
+                                <div class="post-actions">
+                                    <p><i class="fa-regular fa-heart"></i> 33</p>
+                                    <p><i class="fa-regular fa-comment"></i> 12</p>
+                                    <i class="fa-solid fa-share-from-square"></i>
+                                </div>
+                            </div><div class="post-container">
+                                <div class="user-info-post">
+                                    <div class="left-side-post">
+                                        <img src="profile-picture-post">
+                                        <div class="col-flex">
+                                            <p>User_Name 2</p>
+                                            <p>Job Title 2</p>
+                                        </div>
+                                    </div>
+                                    <div class="right-side-post">
+                                        <div class="col-flex">
+                                            <p>...</p>
+                                            <p>Date/Time</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat minus impedit consequuntur alias blanditiis debitis aliquam velit voluptas magnam. Minima modi voluptatem culpa inventore, repudiandae rerum tempora asperiores ducimus.</p>
+                                    <img src="" alt="Image of a Post">
+                                </div>
+                                <div class="post-actions">
+                                    <p><i class="fa-regular fa-heart"></i> 47</p>
+                                    <p><i class="fa-regular fa-comment"></i> 8</p>
+                                    <i class="fa-solid fa-share-from-square"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
