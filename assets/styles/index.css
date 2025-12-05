@@ -52,7 +52,7 @@ h2 {
   height: 100svh;
 }
 
-.welcome-sign, .input-box, .forgopass, .buttons {
+.welcome-sign, .input-box, .forgopass, .buttons, .warning {
   left: 33%;
 }
 
@@ -60,6 +60,16 @@ h2 {
   position: absolute;
   top: 20%;
   font-size: 36px;
+}
+
+.warning {
+  position: absolute;
+  top: 32%;
+}
+
+.wrong-info {
+  color: red;
+  font-weight: 600;
 }
 
 .input-box {
