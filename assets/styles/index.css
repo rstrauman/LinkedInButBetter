@@ -1,1 +1,109 @@
 @import './style.css';
+
+* {
+  color: #0077B5;
+}
+
+body {
+  background-color: #e9e9e9;
+}
+
+.header-left {
+  position: relative;
+  background: url(../media/login-banner.png) center / cover no-repeat;
+  height: 100svh;
+  width: 100%;
+}
+
+.header-text {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+h2 {
+  color: white;
+  font-size: 65px;
+  text-shadow: 2px 4px #666;
+}
+
+#link-logo {
+  vertical-align: middle;
+  width: 70px;
+  display: inline-block;
+}
+
+.header-container {
+  width: 40%;
+  height: 100svh;
+
+}
+
+.index-container {
+  display: flex;
+}
+
+.main-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  gap: 20px;
+  width: 60%;
+  height: 100svh;
+}
+
+.welcome-sign, .input-box, .forgopass, .buttons {
+  left: 33%;
+}
+
+.welcome-sign {
+  position: absolute;
+  top: 20%;
+  font-size: 36px;
+}
+
+.input-box {
+  display: grid;
+  position: absolute;
+  top: 35%;
+}
+
+#username, #password {
+  background-color: #4a7ec24a;
+  color: #0077B5;
+  width: 320px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.forgopass {
+  position: absolute;
+  top: 50%;
+  width: 200px;
+}
+
+.buttons {
+  display: flex;
+  position: absolute;
+  top: 60%;
+  width: 200px;
+}
+
+.login {
+  padding: 10px;
+  font-weight: 600;
+  width: 100px;
+  background-color: #0077B5;
+  border: 1px solid #fff;
+  color: white;
+  margin-right: 40px;
+}
+
+.signup {
+  padding: 10px;
+  font-weight: 600;
+  width: 100px;
+  background-color: #fff;
+  border: 1px solid #0077B5;
+  color: #0077B5;
+}
