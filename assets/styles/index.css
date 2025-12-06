@@ -86,11 +86,24 @@ h2 {
   margin-top: 10px;
 }
 
+#username:focus, #password:focus {
+  transform: scale(1.02);
+  background-color: #94b2dbd1;
+  box-shadow: 2px 2px #00000023;
+}
+
 .forgopass {
   position: absolute;
   top: 50%;
   width: 200px;
 }
+
+.forgopass:hover {
+  transform: scale(1.02);
+ cursor: pointer;
+}
+
+
 
 .buttons {
   display: flex;
@@ -116,4 +129,29 @@ h2 {
   background-color: #fff;
   border: 1px solid #0077B5;
   color: #0077B5;
+}
+
+
+footer {
+  width: 60%;
+  margin-left: auto;
+  padding: 10px 40px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.policy {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 6px;
+  font-size: 14px;
+}
+
+.policy p {
+  cursor: pointer;
+}
+
+.watermark {
+  text-align: right;
 }
