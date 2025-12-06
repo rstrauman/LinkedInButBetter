@@ -159,11 +159,15 @@ footer {
 /* dialog */
 
 dialog {
-  position: relative;
-  margin: auto;
-  top: 0;
+  position: fixed;
+  top: 30%;
+  left: 42%;
   border: none;
   box-shadow: 2px 1px #666;
+}
+
+dialog::backdrop {
+  animation: none !important;
 }
 
 .reg-dialog {
@@ -187,4 +191,38 @@ dialog {
   margin-top: 5px;
   color: white;
   background-color: #0077B5;
+}
+
+/* animation */
+
+.flyingdata {
+  animation: flyingdata 1s ease-in forwards;
+}
+
+@keyframes flyingdata {
+  0% {
+    left: 42%;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+  }
+}
+
+.switchbackground {
+  background: url(../media/login-banner2.png) center / cover no-repeat;
+  animation: switchbackground 1s forwards;
+}
+
+@keyframes switchbackground {
+  0% {
+    opacity: 1;
+    transform: translateX(900px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
