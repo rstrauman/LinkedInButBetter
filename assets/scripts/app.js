@@ -19,6 +19,8 @@ const passwordinput = getElement('password');
 const inputbox = select('.input-box');
 const signup = select('.signup');
 const regdialog = select('.reg-dialog');
+const reguser = select('.reg-user');
+const regpass = select('.reg-pass');
 const close = select('.close');
 const reginfo = select('.reg-info');
 const submit = select('.submit');
@@ -26,69 +28,30 @@ usernameinput.value = '';
 passwordinput.value = '';
 let matched = false;
 
-class Client{
-  #username;
-  #password;
-
-  constructor(username, password) {
-    this.#username = username;
-    this.#password = password;
-  }
-
-  get username() {return this.#username};
-  get password() {return this.#password};
-}
-
-const user = [
-  new Client('daniel', 'daniel123'),
-  new Client('riley', 'riley123')
+const users = JSON.parse(localStorage.getItem('users')) || [
+  { username: 'daniel', password: 'daniel123' },
+  { username: 'riley', password: 'riley123' }
 ];
-localStorage.setItem('user', JSON.stringify(user));
 
 function matchCred() {
   const typedUser = usernameinput.value;
   const typedPass = passwordinput.value;
 
-  for( let i = 0; i < user.length; i++) {
-    if (typedUser === user[i].username && typedPass === user[i].password) {
+  for( let i = 0; i < users.length; i++) {
+    if (typedUser === users[i].username && typedPass === users[i].password) {
       matched = true;
       break;
     } 
   }
 }
 
-// function getUserData() {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       if (!userOne) {
-//         reject(new Error('User does not exist'));
-//       } else {
-//         resolve(userOne);
-//       }
-//     }, 5000);
-//   });
-// }
+function regUser() {
+  const regU = reguser.value;
+  const regP = regpass.value;
+  users.push({ username: regU, password: regP });
 
-// function greetUser(user) {
-//   console.log(`Hello, ${user.username}`);
-// }
-
-// function errormsg(error) {
-//   console.log(error.message);
-// }
-
-// async function result() {
-//   try {
-//     const user = await getUserData();
-//     greetUser(user);
-//   } catch (error) {
-//     errormsg(error);
-//   } finally {
-//     console.log('nice to meet you');
-//   }
-// }
-
-// result();
+}
+localStorage.setItem('users', JSON.stringify(users));
 
 listen('click', login, () => {
   matchCred();
@@ -121,6 +84,8 @@ inputbox.addEventListener('keydown', (e) => {
 
 listen('click', signup, () => {
   regdialog.showModal();
+  reguser.value = '';
+  regpass.value = '';
 })
 
 listen('click', close, () => {
@@ -128,7 +93,10 @@ listen('click', close, () => {
 })
 
 listen('click', submit, () => {
+  regUser();
   reginfo.innerText = 'Registered successfully!';
+  reguser.value = '';
+  regpass.value = '';
   setTimeout(() => {
     reginfo.innerText = '';
     regdialog.close();
