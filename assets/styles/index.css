@@ -155,3 +155,36 @@ footer {
 .watermark {
   text-align: right;
 }
+
+/* dialog */
+
+dialog {
+  position: relative;
+  margin: auto;
+  top: 0;
+  border: none;
+  box-shadow: 2px 1px #666;
+}
+
+.reg-dialog {
+  width: 220px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.reg-dialog input{
+  border: 1px solid #666;
+  background-color: #00000023;
+}
+
+.close {
+  text-align: right;
+  cursor: pointer;
+}
+
+.submit {
+  padding: 5px 10px;
+  margin-top: 5px;
+  color: white;
+  background-color: #0077B5;
+}

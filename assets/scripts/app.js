@@ -17,6 +17,11 @@ const wronginfo = select('.wrong-info');
 const usernameinput = getElement('username');
 const passwordinput = getElement('password');
 const inputbox = select('.input-box');
+const signup = select('.signup');
+const regdialog = select('.reg-dialog');
+const close = select('.close');
+const reginfo = select('.reg-info');
+const submit = select('.submit');
 usernameinput.value = '';
 passwordinput.value = '';
 let matched = false;
@@ -112,6 +117,22 @@ inputbox.addEventListener('keydown', (e) => {
       passwordinput.value = '';
     }
 } 
+})
+
+listen('click', signup, () => {
+  regdialog.showModal();
+})
+
+listen('click', close, () => {
+  regdialog.close();
+})
+
+listen('click', submit, () => {
+  reginfo.innerText = 'Registered successfully!';
+  setTimeout(() => {
+    reginfo.innerText = '';
+    regdialog.close();
+  },3000)
 })
 
 })
