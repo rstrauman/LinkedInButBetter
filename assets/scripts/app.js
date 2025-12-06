@@ -13,6 +13,7 @@ import {
 document.addEventListener('DOMContentLoaded', () => {
 
 const login = select('.login');
+const header = select('.header-left');
 const wronginfo = select('.wrong-info');
 const usernameinput = getElement('username');
 const passwordinput = getElement('password');
@@ -100,7 +101,20 @@ listen('click', submit, () => {
   setTimeout(() => {
     reginfo.innerText = '';
     regdialog.close();
-  },3000)
+  },1000)
+  addClass(regdialog, 'flyingdata');
+  setTimeout(() => {
+    removeClass(regdialog, 'flyingdata');
+    regdialog.close();
+  }, 1000)
+  addClass(header, 'switchbackground');
+  setTimeout(() => {
+    removeClass(header, 'switchbackground');
+    regdialog.close();
+  }, 2000)
 })
 
+listen('animationend', header, ()=> {
+  header.style.backgroundImage = 'url=(../media/login-banner2.png)';
+})
 })
