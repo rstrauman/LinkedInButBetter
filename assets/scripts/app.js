@@ -6,7 +6,8 @@ import {
     listen,
     addClass,
     removeClass,
-    toggleClass
+    toggleClass,
+    create
 } from './utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,7 +20,6 @@ const inputbox = select('.input-box');
 usernameinput.value = '';
 passwordinput.value = '';
 let matched = false;
-
 
 class Client{
   #username;
