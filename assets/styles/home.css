@@ -1,1 +1,120 @@
 @import './style.css';
+
+main {
+    background-color: #F3F2EF;
+}
+
+.main-header-flex, .header-left, .header-logo-container, .search-container, .search-wrapper, 
+.header-right, .header-btns, .nav-list, .col-flex {
+    display: flex;
+}
+
+.col-flex {
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.main-header-flex {
+    justify-content: space-between;
+}
+
+.header-left {
+    gap: 5px;
+    align-items: center;
+}
+
+.header-logo-container, .nav-item, .col-flex.biz, .col-flex.prem, .search-icon {
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+/**************************************/
+/*              Header                */
+/**************************************/
+
+.header-bg-container {
+    height: 60px; 
+    width: 100%;
+    background-color: #fff;
+    color: #808080;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.header-logo-container {
+    height: 52px;
+    width: 52px;
+    justify-content: center;
+    place-items: center;
+}
+
+.search-container {
+    width: 350px;
+    height: 60px;
+} 
+
+.search-bar {
+    background-color: #fff;
+    border: 1px solid #808080;
+    border-radius: 50px;
+    width: 100%;
+    padding: 8px 12px 8px 30px;
+}
+
+.search-wrapper {
+    position: relative;
+    justify-content: center;
+    place-items: center;
+    width: 350px;
+    height: 60px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    transform: translateY(-5px);
+    font-size: 32px;
+    color: #4b4b4b;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    justify-content: center;
+    place-items: center;
+    gap: 10px;
+}
+
+.nav-item:hover, .col-flex.biz:hover, .col-flex.prem:hover {
+    color: black;
+}
+
+.nav-item i, .col-flex.biz i, .col-flex.prem i {
+    font-size: 24px;
+}
+
+.nav-item p, .col-flex.biz p, .col-flex.prem p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav-item img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.divider {
+    width: 1px;
+    background-color: #dfdfdf;
+    margin: 0 20px 0 20px;
+}
+
+.col-flex.biz {
+    padding-right: 10px;
+}
+
+.col-flex.prem i{
+    color: gold;
+}
