@@ -24,3 +24,4 @@ export function listen(event, selector, callback){
 export const addClass = (element, ...classes) => element.classList.add(...classes);
 export const removeClass = (element, ...classes) => element.classList.remove(...classes);
 export const toggleClass = (element, ...className) => element.classList.toggle(...className);
+export const create = (tag) => document.createElement(tag);
