@@ -1,1 +1,232 @@
 @import './style.css';
+
+main {
+    background-color: #F3F2EF;
+}
+
+.main-header-flex, .header-left, .header-logo-container, .search-container, .search-wrapper, 
+.header-right, .header-btns, .nav-list, .col-flex, .three-col-flex, .connection-followers-flex {
+    display: flex;
+}
+
+.col-flex {
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.three-col-flex {
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.main-header-flex {
+    justify-content: space-between;
+}
+
+.header-left {
+    gap: 5px;
+    align-items: center;
+}
+
+.header-logo-container, .nav-item, .col-flex.biz, .col-flex.prem, .search-icon {
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+/**************************************/
+/*              Header                */
+/**************************************/
+
+.header-bg-container {
+    height: 60px; 
+    width: 100%;
+    background-color: #fff;
+    color: #808080;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.header-logo-container {
+    height: 52px;
+    width: 52px;
+    justify-content: center;
+    place-items: center;
+}
+
+.search-container {
+    width: 350px;
+    height: 60px;
+} 
+
+.search-bar {
+    background-color: #fff;
+    border: 1px solid #808080;
+    border-radius: 50px;
+    width: 100%;
+    padding: 8px 12px 8px 30px;
+}
+
+.search-wrapper {
+    position: relative;
+    justify-content: center;
+    place-items: center;
+    width: 350px;
+    height: 60px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    transform: translateY(-5px);
+    font-size: 32px;
+    color: #4b4b4b;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    justify-content: center;
+    place-items: center;
+    gap: 10px;
+}
+
+.nav-item:hover, .col-flex.biz:hover, .col-flex.prem:hover {
+    color: black;
+}
+
+.nav-item i, .col-flex.biz i, .col-flex.prem i {
+    font-size: 24px;
+}
+
+.nav-item p, .col-flex.biz p, .col-flex.prem p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav-item img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.divider {
+    width: 1px;
+    background-color: #dfdfdf;
+    margin: 0 20px 0 20px;
+}
+
+.col-flex.biz {
+    padding-right: 10px;
+}
+
+.col-flex.prem i, .premium i{
+    color: gold;
+}
+
+/**************************************/
+/*               Main                 */
+/**************************************/
+/**************************************/
+/*               Left                 */
+/**************************************/
+
+.col-flex.main-left {
+    width: 25%;
+    gap: 20px;
+}
+
+.profile-info-bg, .connection-followers-flex, .links, .premium, .pdf {
+    width: 90%;
+    text-align: center;
+}
+
+.profile-info-bg, .connections-followers, .links, .premium, .pdf { 
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.profile-info-bg {
+    position: relative;
+}
+
+.profile-banner {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 75px;
+    width: 100%;
+}
+
+.profile-image {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    top: 108px;
+    left: 50%;
+    transform: translate(-50%, -65px);
+}
+
+.fullname {
+    padding-top: 30px;
+}
+
+.location {
+    color: #808080;
+    font-size: 12px;
+}
+
+.bio {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.connection-followers-flex {
+    gap: 4px;
+}
+
+.connections-followers {
+    width: 50%;
+    padding: 10px;
+}
+
+.fol-con {
+    font-size: 12px;
+    font-weight: 500;
+    color: #808080;
+}
+
+.user-stats {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.links p {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.premium p {
+    font-size: 12px;
+    color: #808080;
+    padding: 5px 5px;    
+}
+
+.premium i {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.pdf {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.pdf:hover {
+    background-color: #dfdfdf;
+}
