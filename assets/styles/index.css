@@ -9,16 +9,48 @@ body {
 }
 
 .header-left {
-  position: relative;
+  position: absolute;
   background: url(../media/login-banner.png) center / cover no-repeat;
   height: 100svh;
   width: 100%;
+  transition: opacity 1s ease;
+}
+
+.header-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../media/login-banner2.png) center / cover no-repeat;
+  height: 100svh;
+  width: 100%;
+  transition: opacity 1s ease;
 }
 
 .header-text {
   position: absolute;
   top: 25%;
   left: 25%;
+}
+
+.header-text-right {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+
+}
+
+.moveright {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: url(../media/login-banner2.png) center / cover no-repeat;
+  height: 100svh;
+  width: 40%;
+  transition: opacity 1s ease;
+}
+
+.moveleft {
+  transform: translateX(-90%);
 }
 
 h2 {
@@ -34,9 +66,9 @@ h2 {
 }
 
 .header-container {
+  position: relative;
   width: 40%;
   height: 100svh;
-
 }
 
 .index-container {
@@ -50,19 +82,20 @@ h2 {
   gap: 20px;
   width: 60%;
   height: 100svh;
+  transition: opacity 1s ease;
 }
 
 .welcome-sign, .input-box, .forgopass, .buttons, .warning {
   left: 33%;
 }
 
-.welcome-sign {
+.welcome-sign, .reg-sign {
   position: absolute;
   top: 20%;
   font-size: 36px;
 }
 
-.warning {
+.warning, .reg-greeting {
   position: absolute;
   top: 32%;
 }
@@ -72,13 +105,13 @@ h2 {
   font-weight: 600;
 }
 
-.input-box {
+.input-box, .reg-input-box{
   display: grid;
   position: absolute;
   top: 35%;
 }
 
-#username, #password {
+#username, #password, .reg-user, .reg-pass{
   background-color: #4a7ec24a;
   color: #0077B5;
   width: 320px;
@@ -86,7 +119,8 @@ h2 {
   margin-top: 10px;
 }
 
-#username:focus, #password:focus {
+
+#username:focus, #password:focus, .reg-user:focus, .reg-pass:focus {
   transform: scale(1.02);
   background-color: #94b2dbd1;
   box-shadow: 2px 2px #00000023;
@@ -108,29 +142,43 @@ h2 {
 .buttons {
   display: flex;
   position: absolute;
+  left: 33%;
   top: 60%;
-  width: 200px;
+}
+
+.login, .signup {
+  padding: 10px;
+  font-weight: 600;
+  width: 120px; 
+  text-align: center;
 }
 
 .login {
-  padding: 10px;
-  font-weight: 600;
-  width: 100px;
   background-color: #0077B5;
   border: 1px solid #fff;
   color: white;
   margin-right: 40px;
 }
 
-.signup {
-  padding: 10px;
-  font-weight: 600;
-  width: 100px;
+.submit {
+  background-color: #0077B5;
+  border: 1px solid #fff;
+  color: white;
+  margin-left: 150px;
+  margin-right: 40px;
+}
+
+.signup, .backtologin {
   background-color: #fff;
   border: 1px solid #0077B5;
   color: #0077B5;
 }
 
+.submit, .backtologin {
+  padding: 10px;
+  font-weight: 600;
+  text-align: center;
+}
 
 footer {
   width: 60%;
@@ -138,6 +186,9 @@ footer {
   padding: 10px 40px;
   position: absolute;
   bottom: 0;
+}
+
+.rightiszero {
   right: 0;
 }
 
@@ -152,39 +203,14 @@ footer {
   cursor: pointer;
 }
 
-.watermark {
+.textalignleft {
+  text-align: left;
+}
+
+.textalignright {
   text-align: right;
 }
 
-/* dialog */
-
-dialog {
-  position: fixed;
-  top: 30%;
-  left: 42%;
-  border: none;
-  box-shadow: 2px 1px #666;
-}
-
-dialog::backdrop {
-  animation: none !important;
-}
-
-.reg-dialog {
-  width: 220px;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.reg-dialog input{
-  border: 1px solid #666;
-  background-color: #00000023;
-}
-
-.close {
-  text-align: right;
-  cursor: pointer;
-}
 
 .submit {
   padding: 5px 10px;
@@ -193,9 +219,14 @@ dialog::backdrop {
   background-color: #0077B5;
 }
 
+.invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* animation */
 
-.flyingdata {
+/* .flyingdata {
   animation: flyingdata 1s ease-in forwards;
 }
 
@@ -207,9 +238,9 @@ dialog::backdrop {
     left: 0%;
     opacity: 0;
   }
-}
+} */
 
-.switchbackground {
+/* .switchbackground {
   background: url(../media/login-banner2.png) center / cover no-repeat;
   animation: switchbackground 1s forwards;
 }
@@ -224,5 +255,38 @@ dialog::backdrop {
   }
   100% {
     opacity: 1;
+  }
+} */
+
+.flyright {
+  animation: flyright 1s forwards;
+}
+
+@keyframes flyright {
+  0% {
+    transform: translateX(80%);
+  }
+}
+
+.flyleft {
+  animation: flyleft 1s forwards;
+}
+
+@keyframes flyleft {
+  0% {
+    transform: translateX(-80%);
+  }
+}
+
+.regfly {
+  animation: regfly 1s forwards;
+}
+
+@keyframes regfly {
+  0% {
+    transform: translateX(-180%);
+  }
+  100% {
+    transform: translateX(-80%);
   }
 }

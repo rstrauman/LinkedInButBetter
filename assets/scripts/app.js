@@ -14,17 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const login = select('.login');
 const header = select('.header-left');
+const loginside = select('.login-side');
+const regside = select('.reg-side');
+const contentpart = select('.main-container');
+const footer = select('footer');
 const wronginfo = select('.wrong-info');
 const usernameinput = getElement('username');
 const passwordinput = getElement('password');
 const inputbox = select('.input-box');
 const signup = select('.signup');
-const regdialog = select('.reg-dialog');
+const backtologin = select('.backtologin');
 const reguser = select('.reg-user');
 const regpass = select('.reg-pass');
-const close = select('.close');
 const reginfo = select('.reg-info');
 const submit = select('.submit');
+const watermark = select('.watermark');
 usernameinput.value = '';
 passwordinput.value = '';
 let matched = false;
@@ -84,13 +88,39 @@ inputbox.addEventListener('keydown', (e) => {
 })
 
 listen('click', signup, () => {
-  regdialog.showModal();
+  addClass(header, 'flyright');
+  removeClass(header, 'flyleft');
+  addClass(contentpart, 'regfly');
+  removeClass(contentpart, 'flyright');
+  addClass(header, 'header-right');
+  removeClass(header, 'header-left');
+  addClass(loginside, 'invisible');
+  removeClass(regside, 'invisible');
+  addClass(contentpart, 'moveleft');
+  removeClass(footer, 'rightiszero');
+  addClass(header, 'moveright');
+  removeClass(watermark, 'textalignright');
+  addClass(watermark, 'textalignleft');
   reguser.value = '';
   regpass.value = '';
 })
 
-listen('click', close, () => {
-  regdialog.close();
+listen('click', backtologin, () => {
+  addClass(header, 'flyleft');
+  addClass(contentpart, 'flyright');
+  removeClass(contentpart, 'regfly');
+  removeClass(header, 'flyright');
+  removeClass(header, 'header-right');
+  addClass(header, 'header-left');
+  removeClass(loginside, 'invisible');
+  addClass(regside, 'invisible');
+  removeClass(contentpart, 'moveleft');
+  addClass(footer, 'rightiszero');
+  removeClass(header, 'moveright');
+  addClass(watermark, 'textalignright');
+  removeClass(watermark, 'textalignleft');
+  usernameinput.value = '';
+  passwordinput.value = '';
 })
 
 listen('click', submit, () => {
@@ -100,21 +130,10 @@ listen('click', submit, () => {
   regpass.value = '';
   setTimeout(() => {
     reginfo.innerText = '';
-    regdialog.close();
   },1000)
-  addClass(regdialog, 'flyingdata');
-  setTimeout(() => {
-    removeClass(regdialog, 'flyingdata');
-    regdialog.close();
-  }, 1000)
-  addClass(header, 'switchbackground');
-  setTimeout(() => {
-    removeClass(header, 'switchbackground');
-    regdialog.close();
-  }, 2000)
 })
 
-listen('animationend', header, ()=> {
-  header.style.backgroundImage = 'url=(../media/login-banner2.png)';
-})
+// listen('animationend', header, ()=> {
+//   header.style.backgroundImage = 'url=(../media/login-banner2.png)';
+// })
 })

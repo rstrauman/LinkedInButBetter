@@ -25,36 +25,47 @@
         </div>
         <div class="main-container">
             <main>
-                <div class="welcome-sign">
-                    <h1>Welcome</h1>
-                </div>
-                <div class="warning">
-                    <p class="wrong-info"></p>
-                </div>
-                <div class="input-box">
-                    <input id="username" type="text" value="username" placeholder="Username" required>
-                    <input id="password" type="text" value="password" placeholder="Password" required>
-                </div>
-                <div class="forgopass">
-                    <p>Forgot Password?</p>
-                </div>
-                <div class="buttons">
-                    <button class="login" id="login">Login</button>
-                    <button class="signup">Sign up</button>
-                </div>
-                <dialog class="reg-dialog">
-                    <div class="register">
-                        <p class="close">X</p>
-                        <p class="reg-info"></p>
-                        <input type="text" class="reg-user" value="reg-user" placeholder="New Username" required>
-                        <input type="text" class="reg-pass" value="reg-pass" placeholder="New Password" required>
-                        <button class="submit">submit</button>
+                <div class="login-side">
+                    <div class="welcome-sign">
+                        <h1>Welcome</h1>
                     </div>
-                </dialog>
+                    <div class="warning">
+                        <p class="wrong-info"></p>
+                    </div>
+                    <div class="input-box">
+                        <input id="username" type="text" value="username" placeholder="Username" required>
+                        <input id="password" type="text" value="password" placeholder="Password" required>
+                    </div>
+                    <div class="forgopass">
+                        <p>Forgot Password?</p>
+                    </div>
+                    <div class="buttons login-button">
+                        <button class="login" id="login">Login</button>
+                        <button class="signup">Sign up</button>
+                    </div>
+                </div>
+                <div class="reg-side invisible">
+                    <div class="register">
+                        <div class="reg-sign">
+                            <h1>Registration</h1>
+                        </div>
+                        <div class="reg-greeting">
+                            <p class="reg-info"></p>
+                        </div>
+                        <div class="reg-input-box">
+                            <input type="text" class="reg-user" value="reg-user" placeholder="New Username" required>
+                            <input type="text" class="reg-pass" value="reg-pass" placeholder="New Password" required>
+                        </div>
+                        <div class="buttons">
+                            <button class="submit">submit</button>
+                            <button class="backtologin" id="backtologin">LoginNow</button>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
-    <footer>
+    <footer class="rightiszero">
         <div class="policy">
             <p>Copyright Policy</p>
             <p>Privacy Policy</p>
@@ -63,7 +74,7 @@
             <p>Cookies Policy</p>
             <p>Community Guidelines</p>
         </div>
-        <div class="watermark">
+        <div class="watermark textalignright">
             <p>&copy; 2025 LBB</p>
         </div>
     </footer>
