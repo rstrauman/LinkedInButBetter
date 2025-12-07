@@ -5,7 +5,8 @@ main {
 }
 
 .main-header-flex, .header-left, .header-logo-container, .search-container, .search-wrapper, 
-.header-right, .header-btns, .nav-list, .col-flex, .three-col-flex, .connection-followers-flex {
+.header-right, .header-btns, .nav-list, .col-flex, .three-col-flex, .connection-followers-flex,
+.post-profile-img, .post-icons {
     display: flex;
 }
 
@@ -17,7 +18,7 @@ main {
 
 .three-col-flex {
     align-items: flex-start;
-    padding-top: 20px;
+    padding: 20px 10px;
 }
 
 .main-header-flex {
@@ -228,5 +229,85 @@ main {
 }
 
 .pdf:hover {
+    background-color: #dfdfdf;
+}
+
+/**************************************/
+/*              Middle                */
+/**************************************/
+
+.col-flex.main-middle {
+    gap: 20px;
+    width: 50%;
+}
+
+.post-profile-img {
+    gap: 10px;
+}
+
+.make-post-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+}
+
+.post-form {
+    background-color: #fff;
+    border: solid 1px #dfdfdf;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.post-profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#new-post {
+    width: 100%;
+    background-color: #fff;
+    border: solid 1px #4b4b4b;
+    border-radius: 50px;
+    height: 50px;
+    cursor: pointer;
+    line-height: 50px;
+    padding-left: 10px;
+    color: #4b4b4b;
+}
+
+.post-icons {
+    justify-content: space-around;
+    align-items: center;
+    line-height: 50px;
+    padding-top: 20px;
+}
+
+.post-icons-text {
+    color: #4b4b4b;
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+#video {
+    color: hsl(84, 100%, 44%);
+    font-size: 24px;
+}
+
+#photo {
+    color: blue;
+    font-size: 24px;
+}
+
+#article {
+    color: orange;
+    font-size: 24px;
+}
+
+.post-icons-text:hover {
     background-color: #dfdfdf;
 }

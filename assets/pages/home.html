@@ -119,20 +119,18 @@
                     </div>
                 </div>
                 <div class="col-flex main-middle">
-                    <div class="content-container">
-                        <form action="/submit" method="POST">
-                            <textarea id="new-post" name="new-post" placeholder="What's up?" value="" rows="4" cols="50"></textarea>
-                            <div class="img-post-container">
-                                <div>
-                                    <input type="file" id="photo-upload" accept="image/*" hidden>
-                                    <label for=photo-upload class="upload-icon">
-                                        <i class="fa-regular fa-image"></i>
-                                    </label>
-                                    <span id="photo-name" class="photo-name"></span>
-                                </div>
-                                <button type="button" id="post-btn">Post</button>
+                    <div class="make-post-container">
+                        <div class="post-form">
+                            <div class="post-profile-img">
+                                <img class="post-profile-photo" src="https://avatars.githubusercontent.com/u/214417943?v=4" alt="Profile Image">
+                                <div id="new-post">Start a Post</div>
                             </div>
-                         </form>
+                            <div class="post-icons">
+                                <div class="post-icons-text"><i id="video" class="fa-brands fa-youtube"></i> Video</div>
+                                <div class="post-icons-text"><i id="photo" class="fa-solid fa-image"></i> Photo</div>
+                                <div class="post-icons-text"><i id="article" class="fa-solid fa-newspaper"></i> Article</div>
+                            </div>
+                        </div>
                         <div class="post-flex-container">
                             <div class="post-container">
                                 <div class="user-info-post">
