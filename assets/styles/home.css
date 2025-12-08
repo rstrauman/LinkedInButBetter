@@ -6,12 +6,13 @@ main {
 
 .main-header-flex, .header-left, .header-logo-container, .search-container, .search-wrapper, 
 .header-right, .header-btns, .nav-list, .col-flex, .three-col-flex, .connection-followers-flex,
-.post-profile-img, .post-icons, .post-flex-container, .user-info-post, .left-side-post, .right-side-post, .post-actions 
+.post-profile-img, .post-icons, .post-flex-container, .user-info-post, .left-side-post, .right-side-post, .post-actions,
+.person-card, .user-card
 {
     display: flex;
 }
 
-.col-flex {
+.col-flex, .person-card {
     flex-direction: column;
     justify-content: center;
     place-items: center;
@@ -145,6 +146,7 @@ main {
 
 .profile-info-bg, .connections-followers, .links, .premium, .pdf { 
     background-color: #fff;
+    border: solid 1px #dfdfdf;
     border-radius: 5px;
 }
 
@@ -253,7 +255,7 @@ main {
     width: 90%;
 }
 
-.post-form, .post-container {
+.post-form, .post-container, h3, .user-card {
     background-color: #fff;
     border: solid 1px #dfdfdf;
     border-radius: 5px;
@@ -346,6 +348,7 @@ main {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .post-name, .elipse {
@@ -368,9 +371,77 @@ main {
 .post-actions {
     place-items: center;
     gap: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.fa-heart:hover, .fa-comment:hover, .fa-share-from-square:hover {
+    transform: scale(1.1);
 }
 
 .post-content img {
     margin-top: 10px;
     border-radius: 5px;
+}
+
+/**************************************/
+/*              Right                 */
+/**************************************/
+
+h3 {
+    padding: 10px 15px;
+}
+
+.col-flex.main-right {
+    width: 25%;
+    gap: 20px;
+}
+
+.person-card {
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-card {
+    width: 100%;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.users-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.users-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.users-city {
+    color: #808080;
+    font-size: 12px;
+}
+
+.flex-col.users-info {
+    justify-content: center;
+    place-items: center;
+}
+
+#plus {
+    background-color: #57afdf;
+    width: 30px;
+    height: 30px;
+    color: #2564a4;
+    font-size: 14px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    transition: all 0.25 ease-in-out;
+    cursor: pointer;
+}
+
+#plus:hover {
+    background-color: #6abfed;
 }
