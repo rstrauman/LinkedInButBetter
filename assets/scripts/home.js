@@ -13,7 +13,7 @@ import {
 document.addEventListener('DOMContentLoaded', () => {
   //randomUser APi
 
-const URL = 'https://randomuser.me/api/?nat=CA&results=10&seed=same';
+const URL = 'https://randomuser.me/api/?nat=US,CA&results=10&seed=same';
 
 const options = {
   methods: 'GET',
@@ -44,10 +44,12 @@ async function getUsers(endpoint) {
     const div = create('div');
     addClass(div,'user-card');
     div.innerHTML = `
-    <img src='${user.picture.large}' alt='user image'>
-    <h2>${user.name.title} ${user.name.first} ${user.name.last}</h2>
-    <p>${user.location.city}</p>
-    <i class="fa-solid fa-circle-plus"></i>
+    <img class="users-img" src='${user.picture.large}' alt='user image'>
+    <div class="flex-col users-info">
+      <h2 class="users-name">${user.name.title} ${user.name.first} ${user.name.last}</h2>
+      <p class="users-city">${user.location.city}</p>
+    </div>
+    <i id="plus" class="fa-solid fa-plus"></i>
     `
     displaybox.appendChild(div);
   } )

@@ -64,7 +64,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <div class="col-flex">
-                                        <img src="https://avatars.githubusercontent.com/u/214417943?v=4https://avatars.githubusercontent.com/u/214417943?v=4" alt="profile-picture=img">
+                                        <img src="../media/headshot.png" alt="profile-picture=img">
                                         <p>Me ⯆</p>
                                     </div>
                                 </li>
@@ -90,11 +90,11 @@
                 <div class="col-flex main-left">
                     <div class="profile-info-bg">
                         <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
-                        <img class="profile-image" src="https://avatars.githubusercontent.com/u/214417943?v=4" alt="profile picture">
-                        <h2 class="fullname">John Cena</h2>
-                        <p class="profession">Wrestler</p>
-                        <p class="location">Los Angeles California</p>
-                        <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum excepturi rem eligendi, qui alias a. Sint rem esse id, eius ullam amet nostrum veniam blanditiis doloremque? Cum id harum hic.</p>
+                        <img class="profile-image" src="../media/headshot.png" alt="profile picture">
+                        <h2 class="fullname">Riley Strauman</h2>
+                        <p class="profession">Software Developer</p>
+                        <p class="location">Winnipeg, Manitoba</p>
+                        <p class="bio">Aspiring Software Developer. Studying at Manitoba Institute of Trades and Technology.</p>
                     </div>
                     <div class="connection-followers-flex">
                         <div class="connections-followers">
@@ -119,68 +119,67 @@
                     </div>
                 </div>
                 <div class="col-flex main-middle">
-                    <div class="content-container">
-                        <form action="/submit" method="POST">
-                            <textarea id="new-post" name="new-post" placeholder="What's up?" value="" rows="4" cols="50"></textarea>
-                            <div class="img-post-container">
-                                <div>
-                                    <input type="file" id="photo-upload" accept="image/*" hidden>
-                                    <label for=photo-upload class="upload-icon">
-                                        <i class="fa-regular fa-image"></i>
-                                    </label>
-                                    <span id="photo-name" class="photo-name"></span>
-                                </div>
-                                <button type="button" id="post-btn">Post</button>
+                    <div class="make-post-container">
+                        <div class="post-form">
+                            <div class="post-profile-img">
+                                <img class="post-profile-photo" src="../media/headshot.png" alt="Profile Image">
+                                <div id="new-post">Start a Post</div>
                             </div>
-                         </form>
+                            <div class="post-icons">
+                                <div class="post-icons-text"><i id="video" class="fa-brands fa-youtube"></i> Video</div>
+                                <div class="post-icons-text"><i id="photo" class="fa-solid fa-image"></i> Photo</div>
+                                <div class="post-icons-text"><i id="article" class="fa-solid fa-newspaper"></i> Article</div>
+                            </div>
+                        </div>
                         <div class="post-flex-container">
                             <div class="post-container">
                                 <div class="user-info-post">
                                     <div class="left-side-post">
-                                        <img src="profile-picture-post">
+                                        <img src="../media/Bill Gates.png" alt="Bill Gates Profile Picture">
                                         <div class="col-flex">
-                                            <p>User_Name</p>
-                                            <p>Job Title</p>
+                                            <p class="post-name">Bill Gates</p>
+                                            <p class="job-title">Microsoft CEO</p>
                                         </div>
                                     </div>
                                     <div class="right-side-post">
                                         <div class="col-flex">
-                                            <p>...</p>
-                                            <p>Date/Time</p>
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                            <p class="date-and-time">12/09/2025 12:09PM</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="post-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat minus impedit consequuntur alias blanditiis debitis aliquam velit voluptas magnam. Minima modi voluptatem culpa inventore, repudiandae rerum tempora asperiores ducimus.</p>
+                                    <p>One of the most exciting parts of my job is watching ideas that once lived only on whiteboards turn into tools that change people’s lives. Innovation rarely arrives with fanfare, most days, it looks like curiosity, persistence, and a team willing to keep asking ‘What if…? If you stay committed to learning, the future has a way of opening up.</p>
                                 </div>
                                 <div class="post-actions">
                                     <p><i class="fa-regular fa-heart"></i> 33</p>
                                     <p><i class="fa-regular fa-comment"></i> 12</p>
                                     <i class="fa-solid fa-share-from-square"></i>
                                 </div>
-                            </div><div class="post-container">
+                            </div>
+                            <div class="post-container">
                                 <div class="user-info-post">
                                     <div class="left-side-post">
-                                        <img src="profile-picture-post">
+                                        <img src="../media/dwayne.jpg" alt="Bill Gates Profile Picture">
                                         <div class="col-flex">
-                                            <p>User_Name 2</p>
-                                            <p>Job Title 2</p>
+                                            <p class="post-name">Dwayne "The Rock" Johnson</p>
+                                            <p class="job-title">Actor</p>
                                         </div>
                                     </div>
                                     <div class="right-side-post">
                                         <div class="col-flex">
-                                            <p>...</p>
-                                            <p>Date/Time</p>
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                            <p class="date-and-time">12/09/2025 10:24AM</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="post-content">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa fugiat minus impedit consequuntur alias blanditiis debitis aliquam velit voluptas magnam. Minima modi voluptatem culpa inventore, repudiandae rerum tempora asperiores ducimus.</p>
-                                    <img src="" alt="Image of a Post">
+                                    <p>28 years ago, I walked down that WWE ramp for the very first time. Nervous, unproven, and rocking a haircut only a mother could love. But I showed up. I listened. I learned And I worked harder than anyone in the building. That debut didn’t make me a superstar, it made me hungry. It taught me that opportunity doesn’t arrive fully formed… it arrives as a challenge disguised as a chance. And every career, no matter the industry, starts with one moment: the moment you bet on yourself. If you're standing at the start of your journey, embrace it Show up. Do the work. And keep moving forward. Because one day, that unsure kid inside you will look back... and smile at just how far you’ve come. 👊🏽🔥</p>
+                                    <img src="../media/rock-post.jpg" alt="Image of a Post">
                                 </div>
                                 <div class="post-actions">
-                                    <p><i class="fa-regular fa-heart"></i> 47</p>
-                                    <p><i class="fa-regular fa-comment"></i> 8</p>
+                                    <p><i class="fa-regular fa-heart"></i> 67</p>
+                                    <p><i class="fa-regular fa-comment"></i> 15</p>
                                     <i class="fa-solid fa-share-from-square"></i>
                                 </div>
                             </div>
@@ -191,8 +190,7 @@
                     <div class="people-section">
                         <h3>People you may Know</h3>
                     </div>
-                    <div class="person-card">
-                    </div>
+                    <div class="person-card"></div>
                 </div>
             </div>
         </div>
