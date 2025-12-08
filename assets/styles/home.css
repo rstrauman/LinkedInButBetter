@@ -6,7 +6,8 @@ main {
 
 .main-header-flex, .header-left, .header-logo-container, .search-container, .search-wrapper, 
 .header-right, .header-btns, .nav-list, .col-flex, .three-col-flex, .connection-followers-flex,
-.post-profile-img, .post-icons {
+.post-profile-img, .post-icons, .post-flex-container, .user-info-post, .left-side-post, .right-side-post, .post-actions 
+{
     display: flex;
 }
 
@@ -252,7 +253,7 @@ main {
     width: 90%;
 }
 
-.post-form {
+.post-form, .post-container {
     background-color: #fff;
     border: solid 1px #dfdfdf;
     border-radius: 5px;
@@ -310,4 +311,66 @@ main {
 
 .post-icons-text:hover {
     background-color: #dfdfdf;
+}
+
+.post-flex-container {
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-pfp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.post-text {
+    color: #000;
+    font-size: 18px;
+}
+
+.photo-name {
+    color: #000000;
+}
+
+.user-info-post {
+    justify-content: space-between;
+}
+
+.left-side-post {
+    gap: 10px;
+}
+
+.left-side-post img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.post-name, .elipse {
+    font-weight: 500;
+}
+
+.job-title, .date-and-time {
+    font-size: 12px;
+    color: #808080;
+}
+
+.elipse {
+    font-size: 20px;
+}
+
+.post-content {
+    padding: 20px 0;
+}
+
+.post-actions {
+    place-items: center;
+    gap: 20px;
+}
+
+.post-content img {
+    margin-top: 10px;
+    border-radius: 5px;
 }
