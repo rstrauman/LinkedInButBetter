@@ -10,6 +10,12 @@ import {
     create
 } from './utils.js';
 
+let modal = select('#modal');
+let logoutModal = getElement('logout-modal');
+let modalContent = select('.modal-content');
+
+let modalIsOpen = false;
+
 document.addEventListener('DOMContentLoaded', () => {
   //randomUser APi
 
@@ -56,3 +62,21 @@ async function getUsers(endpoint) {
 }
 displayUser();
 })
+
+function openModal(){
+    modalIsOpen = true;
+    modal.classList.remove('hidden');
+    modalContent.classList.remove('hidden');
+}
+
+function closeModal() {
+    modal.classList.add('hidden');
+    modalContent.classList.add('hidden');
+}
+
+listen('click', logoutModal, openModal);
+modal.addEventListener('click', (e) => {
+  if(!modalContent.contains(e.target)){
+    closeModal();
+  }
+});

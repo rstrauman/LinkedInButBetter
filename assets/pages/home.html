@@ -63,7 +63,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <div class="col-flex">
+                                    <div id="logout-modal" class="col-flex">
                                         <img src="../media/headshot.png" alt="profile-picture=img">
                                         <p>Me ⯆</p>
                                     </div>
@@ -86,6 +86,13 @@
     </header>
     <main>
         <div class="container">
+            <div class="relative-div">
+                <div id="modal" class="modal hidden">
+                    <div class="modal-content hidden">
+                        <a href="../../index.html"><div class="logout">Logout</div></a>
+                    </div>
+                </div>
+            </div>
             <div class="three-col-flex">
                 <div class="col-flex main-left">
                     <div class="profile-info-bg">
@@ -195,6 +202,29 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer-bg">
+            <div class="container">
+                <div class="policy">
+                    <div class="col-flex">
+                        <p>Copyright Policy</p>
+                        <p>Privacy Policy</p>
+                    </div>
+                    <div class="col-flex">
+                        <p>Send Feedback</p>
+                        <p>User Agreement</p>
+                    </div>
+                    <div class="col-flex">
+                        <p>Cookies Policy</p>
+                        <p>Community Guidelines</p>
+                    </div>
+                </div>
+                <div class="watermark">
+                    <p>&copy; 2025 All Rights Reserved LBB</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="../scripts/home.js" type="module"></script>
 </body>
 </html>
