@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentuser = localStorage.getItem('currentuser');
   const pfinfo = select('.profile-info-bg');
   const pfdiv = create('div');
-    addClass(pfdiv,'profile-info-bg');
+    addClass(pfdiv,'profile-card');
   if (currentuser === 'daniel') {
     pfdiv.innerHTML = `
     <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
