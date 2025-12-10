@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const pfinfo = select('.profile-info-bg');
   const pfdiv = create('div');
   const postimg = select('.post-profile-img');
+  const navImg = getElement('logout-modal');
+  const connections = getElement('connections');
+  const followers = getElement('followers');
     addClass(pfdiv,'profile-card');
   if (currentuser === 'daniel') {
     pfdiv.innerHTML = `
@@ -34,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     `
     postimg.innerHTML = `<img class="post-profile-photo" src="../media/gamer.png" alt="Profile Image">
                                 <div id="new-post">Start a Post</div>`
+    navImg.innerHTML = `<img id="nav-img" src="../media/gamer.png" alt="profile-picture=img">
+                        <p>Me ⯆</p>`
+    followers.textContent = "6969";
+    connections.textContent = "67";
   } else if (currentuser === 'riley') {
     pfdiv.innerHTML = `
     <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
@@ -44,6 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <p class="bio">Aspiring Software Developer. Studying at Manitoba Institute of Trades and Technology.</p>`
     postimg.innerHTML = `<img class="post-profile-photo" src="../media/headshot.png" alt="Profile Image">
                                 <div id="new-post">Start a Post</div>`
+    navImg.innerHTML = `<img id="nav-img" src="../media/headshot.png" alt="profile-picture=img">
+                        <p>Me ⯆</p>`
+    followers.textContent = "14";
+    connections.textContent = "45";
   } else {
     pfdiv.innerHTML = `
     <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
@@ -54,6 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
     <p class="bio">Doing Something.</p>`;
     postimg.innerHTML = `<img class="post-profile-photo" src="../media/nobody.png" alt="Profile Image">
                                 <div id="new-post">Start a Post</div>`
+    navImg.innerHTML = `<img id="nav-img" src="../media/nobody.png" alt="profile-picture=img">
+                        <p>Me ⯆</p>`
+    followers.textContent = "0";
+    connections.textContent = "0";
   }
     pfinfo.appendChild(pfdiv);
   };
