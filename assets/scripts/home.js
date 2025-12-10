@@ -17,6 +17,41 @@ let modalContent = select('.modal-content');
 let modalIsOpen = false;
 
 document.addEventListener('DOMContentLoaded', () => {
+  function checkUser() {
+  const currentuser = localStorage.getItem('currentuser');
+  const pfinfo = select('.profile-info-bg');
+  const pfdiv = create('div');
+    addClass(pfdiv,'profile-card');
+  if (currentuser === 'daniel') {
+    pfdiv.innerHTML = `
+    <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
+    <img class="profile-image" src="../media/headshot.png" alt="profile picture">
+    <h2 class="fullname">Daniel Zhang</h2>
+    <p class="profession">Gamer</p>
+    <p class="location">Winnipeg, Manitoba</p>
+    <p class="bio">I game!.</p>
+    `
+  } else if (currentuser === 'riley') {
+    pfdiv.innerHTML = `
+    <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
+    <img class="profile-image" src="../media/headshot.png" alt="profile picture">
+    <h2 class="fullname">Riley Strauman</h2>
+    <p class="profession">Software Developer</p>
+    <p class="location">Winnipeg, Manitoba</p>
+    <p class="bio">Aspiring Software Developer. Studying at Manitoba Institute of Trades and Technology.</p>`
+  } else {
+    pfdiv.innerHTML = `
+    <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
+    <img class="profile-image" src="../media/headshot.png" alt="profile picture">
+    <h2 class="fullname">Somebody</h2>
+    <p class="profession">Some job</p>
+    <p class="location">Somewhere</p>
+    <p class="bio">Doing Something.</p>`
+  }
+    pfinfo.appendChild(pfdiv);
+  };
+  checkUser();
+
   //randomUser APi
 
 const URL = 'https://randomuser.me/api/?nat=US,CA&results=10&seed=same';
@@ -61,7 +96,6 @@ async function getUsers(endpoint) {
   } )
 }
 displayUser();
-})
 
 function openModal(){
     modalIsOpen = true;
@@ -80,3 +114,5 @@ modal.addEventListener('click', (e) => {
     closeModal();
   }
 });
+
+})

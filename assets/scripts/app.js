@@ -58,6 +58,7 @@ function regUser() {
 }
 localStorage.setItem('users', JSON.stringify(users));
 
+
 listen('click', login, () => {
   matchCred();
   if(!matched) {
@@ -65,6 +66,7 @@ listen('click', login, () => {
     usernameinput.value = '';
     passwordinput.value = '';
   } else {
+    localStorage.setItem('currentuser', usernameinput.value);
     wronginfo.innerText = '';
     window.location.href = './assets/pages/home.html';
     usernameinput.value = '';
@@ -79,6 +81,7 @@ inputbox.addEventListener('keydown', (e) => {
       usernameinput.value = '';
       passwordinput.value = '';
     } else {
+      localStorage.setItem('currentuser', usernameinput.value);
       wronginfo.innerText = '';
       window.location.href = './assets/pages/home.html';
       usernameinput.value = '';
