@@ -10,9 +10,10 @@ import {
     create
 } from './utils.js';
 
-let modal = select('#modal');
-let logoutModal = getElement('logout-modal');
-let modalContent = select('.modal-content');
+const modal = select('#modal');
+const logoutModal = getElement('logout-modal');
+const modalContent = select('.modal-content');
+let postsContainer = select('.post-flex-container');
 
 let modalIsOpen = false;
 
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const postimg = select('.post-profile-img');
   const navImg = getElement('logout-modal');
   const connections = getElement('connections');
-  const followers = getElement('followers');
+  const followers = getElement('followers');  
     addClass(pfdiv,'profile-card');
   if (currentuser === 'daniel') {
     pfdiv.innerHTML = `
@@ -88,6 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   checkUser();
 
+  const startPostBtn = getElement('new-post');
+  const postModal = getElement('post-modal');
+  const postModalContent = select('.post-modal-content');
+  const postModalImg = select('.modal-picture');
+  const postcontainer = select('.post-container');
+
   //randomUser APi
 
 const URL = 'https://randomuser.me/api/?nat=US,CA&results=10&seed=same';
@@ -150,5 +157,124 @@ modal.addEventListener('click', (e) => {
     closeModal();
   }
 });
+
+function openPostModal(){
+    postModal.classList.remove('hidden');
+    postModalContent.classList.remove('hidden');
+    postModalImg.classList.remove('hidden');
+
+    postModalContent.innerHTML = `
+                                  <form>
+                                    <textarea class="post-text-area" placeholder="What's on your mind?" rows="4" cols="50"></textarea>
+                                    <div class="post-btn">Post</div>
+                                  </form>
+    `
+
+    const postBtn = select('.post-btn');
+    listen('click', postBtn, () => {
+      post();
+    });
+}
+
+postModal.addEventListener('click', (e) => {
+  if(!postModalContent.contains(e.target)){
+    closePostModal();
+  }
+});
+
+function closePostModal(){
+    addClass(postModal, 'hidden');
+    addClass(postModalContent, 'hidden');
+    addClass(postModalImg, 'hidden');
+}
+
+function post() {
+  const currentuser = localStorage.getItem('currentuser');
+  const textInput = select('.post-text-area');
+    let text = textInput.value.trim();
+    
+    if(!text) return; 
+
+        let postDiv = document.createElement('div');
+        postDiv.classList.add('post-container');
+        
+        let postProfileInfo = document.createElement('div');
+        postProfileInfo.classList.add('post-user-info');
+        postProfileInfo.innerHTML = `
+            <img src="./assets/media/sunset.jpeg" class="post-pfp">
+            <div class="post-user-name">Riley</div>
+        `;
+        postDiv.appendChild(postProfileInfo);
+
+        let postDate = document.createElement('div');
+        postDate.classList.add('post-date');
+        let now = new Date().toLocaleString();
+        if(text) {
+          if(currentuser === 'riley') {
+            postDiv.innerHTML = `
+                                  <div class="user-info-post">
+                                    <div class="left-side-post">
+                                        <img src="../media/headshot.png" alt="Bill Gates Profile Picture">
+                                        <div class="col-flex">
+                                            <p class="post-name">${currentuser}</p>
+                                            <p class="job-title">Software Developer</p>
+                                        </div>
+                                    </div>
+                                    <div class="right-side-post">
+                                        <div class="col-flex">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                            <p class="date-and-time">${now}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p>${text}</p>
+                                </div>
+                                <div class="post-actions">
+                                    <p><i class="fa-regular fa-heart"></i> 0</p>
+                                    <p><i class="fa-regular fa-comment"></i> 0</p>
+                                    <i class="fa-solid fa-share-from-square"></i>`
+          }
+          if(currentuser === 'daniel') {
+            postDiv.innerHTML = `
+                                  <div class="user-info-post">
+                                    <div class="left-side-post">
+                                        <img src="../media/gamer.png" alt="Bill Gates Profile Picture">
+                                        <div class="col-flex">
+                                            <p class="post-name">${currentuser}</p>
+                                            <p class="job-title">Gamer</p>
+                                        </div>
+                                    </div>
+                                    <div class="right-side-post">
+                                        <div class="col-flex">
+                                            <i class="fa-solid fa-ellipsis"></i>
+                                            <p class="date-and-time">${now}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p>${text}</p>
+                                </div>
+                                <div class="post-actions">
+                                    <p><i class="fa-regular fa-heart"></i> 0</p>
+                                    <p><i class="fa-regular fa-comment"></i> 0</p>
+                                    <i class="fa-solid fa-share-from-square"></i>`
+          }
+          if(currentuser != 'riley' && currentuser != 'daniel') {
+            alert('You Dont Have Permission to Post!');
+            return;
+          };
+        }
+
+
+
+        postsContainer.prepend(postDiv);
+        textInput.value = "";
+         closePostModal();
+        
+}
+
+listen('click', startPostBtn,  openPostModal);
+
 
 })

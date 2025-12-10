@@ -514,7 +514,7 @@ h3 {
     border-bottom: 12px solid #fff;
 }
 
-.logout {
+.logout, .post-btn {
     background-color: #0077B5;
     border: 1px solid #fff;
     color: white;
@@ -529,42 +529,41 @@ a {
     text-decoration: none;
 }
 
-.logout:hover {
+.logout:hover, .post-btn:hover {
     background-color: #00669d;
 }
 
-
-/*            */
-/*  animation */
-/*            */
-
-.spin {
-    animation: spin 2s infinite;
+.modal-picture {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-        top: 20%;
-        left: 35%;
-
-    }
-    100% {
-        transform: rotate(360deg);
-        top: 20%;
-        left: 35%;
-    }
+#post-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }
 
-.jitter {
-    animation: jitter 5s infinite;
+.post-modal-content {
+    padding: 20px 20px;
+    border-radius: 5px;;
+    background-color: #ffffff;
 }
 
-@keyframes jitter {
-    50% {
-        transform: translateX(-5px);
-    }
-    100% {
-        transform: translateX(0px);
-    }
+#post-modal.hidden, .modal-picture.hidden, .post-modal-content.hidden {
+    display: none;
+}
+
+.post-text-area {
+    padding: 2px 5px;
+    resize: none;
+}
+
+.post-btn {
+    text-align: center;
 }
