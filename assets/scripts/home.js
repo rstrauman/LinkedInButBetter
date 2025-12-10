@@ -216,7 +216,7 @@ function post() {
                                     <div class="left-side-post">
                                         <img src="../media/headshot.png" alt="Bill Gates Profile Picture">
                                         <div class="col-flex">
-                                            <p class="post-name">${currentuser}</p>
+                                            <p class="post-name">Riley Strauman</p>
                                             <p class="job-title">Software Developer</p>
                                         </div>
                                     </div>
@@ -241,7 +241,7 @@ function post() {
                                     <div class="left-side-post">
                                         <img src="../media/gamer.png" alt="Bill Gates Profile Picture">
                                         <div class="col-flex">
-                                            <p class="post-name">${currentuser}</p>
+                                            <p class="post-name">Daniel Zhang</p>
                                             <p class="job-title">Gamer</p>
                                         </div>
                                     </div>
