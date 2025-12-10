@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (currentuser === 'daniel') {
     pfdiv.innerHTML = `
     <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
-    <img class="profile-image" src="../media/headshot.png" alt="profile picture">
+    <img class="profile-image" src="../media/gamer.png" alt="profile picture">
     <h2 class="fullname">Daniel Zhang</h2>
     <p class="profession">Gamer</p>
     <p class="location">Winnipeg, Manitoba</p>
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     pfdiv.innerHTML = `
     <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
-    <img class="profile-image" src="../media/headshot.png" alt="profile picture">
+    <img class="profile-image" src="../media/nobody.png" alt="profile picture">
     <h2 class="fullname">Somebody</h2>
     <p class="profession">Some job</p>
     <p class="location">Somewhere</p>

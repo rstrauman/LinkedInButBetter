@@ -91,6 +91,7 @@ inputbox.addEventListener('keydown', (e) => {
 })
 
 listen('click', signup, () => {
+  wronginfo.innerText = '';
   addClass(header, 'flyright');
   removeClass(header, 'flyleft');
   addClass(contentpart, 'regfly');
