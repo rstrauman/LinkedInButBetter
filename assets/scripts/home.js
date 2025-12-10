@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentuser = localStorage.getItem('currentuser');
   const pfinfo = select('.profile-info-bg');
   const pfdiv = create('div');
+  const postimg = select('.post-profile-img');
     addClass(pfdiv,'profile-card');
   if (currentuser === 'daniel') {
     pfdiv.innerHTML = `
@@ -31,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <p class="location">Winnipeg, Manitoba</p>
     <p class="bio">I game!.</p>
     `
+    postimg.innerHTML = `<img class="post-profile-photo" src="../media/gamer.png" alt="Profile Image">
+                                <div id="new-post">Start a Post</div>`
   } else if (currentuser === 'riley') {
     pfdiv.innerHTML = `
     <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
@@ -39,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <p class="profession">Software Developer</p>
     <p class="location">Winnipeg, Manitoba</p>
     <p class="bio">Aspiring Software Developer. Studying at Manitoba Institute of Trades and Technology.</p>`
+    postimg.innerHTML = `<img class="post-profile-photo" src="../media/headshot.png" alt="Profile Image">
+                                <div id="new-post">Start a Post</div>`
   } else {
     pfdiv.innerHTML = `
     <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
@@ -46,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     <h2 class="fullname">Somebody</h2>
     <p class="profession">Some job</p>
     <p class="location">Somewhere</p>
-    <p class="bio">Doing Something.</p>`
+    <p class="bio">Doing Something.</p>`;
+    postimg.innerHTML = `<img class="post-profile-photo" src="../media/nobody.png" alt="Profile Image">
+                                <div id="new-post">Start a Post</div>`
   }
     pfinfo.appendChild(pfdiv);
   };
