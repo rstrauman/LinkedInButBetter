@@ -55,6 +55,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>Me ⯆</p>`
     followers.textContent = "14";
     connections.textContent = "45";
+  } else if (currentuser.trim() === '') {
+    pfdiv.innerHTML = `
+    <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
+    <img class="profile-image spin" src="../media/nobody.png" alt="profile picture">
+    <h2 class="fullname jitter">Nooooobody</h2>
+    <p class="profession">???job</p>
+    <p class="location">???</p>
+    <p class="bio">Doing???.</p>`;
+    postimg.innerHTML = `<img class="post-profile-photo spin" src="../media/nobody.png" alt="Profile Image">
+                                <div id="new-post">Start a Post</div>`
+    navImg.innerHTML = `<img id="nav-img" class="spin" src="../media/nobody.png" alt="profile-picture=img">
+                        <p>Me ⯆</p>`
+    followers.textContent = "???";
+    connections.textContent = "???";
   } else {
     pfdiv.innerHTML = `
     <img class="profile-banner" src="../media/banner-1.jpg" alt="profile banner">
