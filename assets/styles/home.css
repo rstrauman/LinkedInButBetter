@@ -532,3 +532,39 @@ a {
 .logout:hover {
     background-color: #00669d;
 }
+
+
+/*            */
+/*  animation */
+/*            */
+
+.spin {
+    animation: spin 2s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        top: 20%;
+        left: 35%;
+
+    }
+    100% {
+        transform: rotate(360deg);
+        top: 20%;
+        left: 35%;
+    }
+}
+
+.jitter {
+    animation: jitter 5s infinite;
+}
+
+@keyframes jitter {
+    50% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
