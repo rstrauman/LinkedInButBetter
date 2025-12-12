@@ -5,8 +5,6 @@
 **LinkedIn But Better** is a two-page web application that simulates a professional social network.  
 It uses the Random User Generator API to display connections, localStorage for login authentication, and a realistic 3-column LinkedIn-style layout.
 
-This project was built as the Final Project for SD-105 (Introduction to Third-Party APIs).
-
 ---
 
 ## Features
