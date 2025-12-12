@@ -44,9 +44,3 @@ It uses the Random User Generator API to display connections, localStorage for l
 - Custom “LinkedIn But Better” tape-style logo
 - Consistent spacing, fonts, colors, and layout
 - Icons from FontAwesome
-
----
-
-## Login Credentials (for marking)
-
-### Riley
