@@ -62,13 +62,13 @@ It uses the Random User Generator API to display connections, localStorage for l
 ## Screenshots
 
 ### Login Page
-![Login Page](screenshots/LoginPage.png)
+![Login Page](assets/media/Login-LinkedIn.png)
 
 ### Home Feed
-![Home Feed](screenshots/HomeFeed.png)
+![Home Feed](assets/media/LinkedInHome.png)
 
 ### Create Post Modal
-![Create Post](screenshots/CreatePost.png)
+![Create Post](assets/media/modal.png)
 
 ---
 
