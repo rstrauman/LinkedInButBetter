@@ -1,4 +1,5 @@
 # LinkedIn But Better — Final Project: Job Finder
+
 **Live Demo:** https://rstrauman.github.io/LinkedInButBetter/
 
 ## Overview
@@ -25,9 +26,9 @@ It uses the Random User Generator API to display connections, localStorage for l
 ### 🧑‍🤝‍🧑 Random User API Integration
 - Fetches 10 profiles from Random User API
 - Displays:
-  - Profile picture  
-  - Full name  
-  - City  
+  - Profile picture
+  - Full name
+  - City
 - Uses `seed=same` for consistent results
 - Clean “People You May Know” card layout
 
@@ -44,3 +45,63 @@ It uses the Random User Generator API to display connections, localStorage for l
 - Custom “LinkedIn But Better” tape-style logo
 - Consistent spacing, fonts, colors, and layout
 - Icons from FontAwesome
+
+---
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- LocalStorage API
+- Random User Generator API
+- Font Awesome
+
+---
+
+## Screenshots
+
+### Login Page
+![Login Page](screenshots/LoginPage.png)
+
+### Home Feed
+![Home Feed](screenshots/HomeFeed.png)
+
+### Create Post Modal
+![Create Post](screenshots/CreatePost.png)
+
+---
+
+## How to Run
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/rstrauman/LinkedInButBetter.git
+```
+
+2. Open the project folder
+
+```bash
+cd LinkedInButBetter
+```
+
+3. Launch the project using Live Server or open `index.html`
+
+---
+
+## What I Learned
+
+This project helped me improve my skills with:
+- DOM manipulation
+- API integration
+- Responsive layout design
+- User authentication logic
+- Dynamic UI rendering
+- LocalStorage data persistence
+
+---
+
+## Project Status
+
+Completed as a final web development project with plans for future improvements and additional social features.
