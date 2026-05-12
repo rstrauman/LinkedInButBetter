@@ -68,7 +68,7 @@ It uses the Random User Generator API to display connections, localStorage for l
 ![Home Feed](assets/media/LinkedInHome.png)
 
 ### Create Post Modal
-![Create Post](assets/media/modal.png)
+![Create Post](assets/media/Modal.png)
 
 ---
 
